@@ -1,0 +1,124 @@
+React: Biblioteca JavaScript para Interfaces de Usuário
+Criado pelo Facebook (originalmente chamado de FaxJS, não Flexbox).
+
+Utilizado em grandes aplicações como Facebook, Instagram e WhatsApp Web.
+
+Foco na construção de interfaces interativas com alta performance.
+
+JSX e Babel
+JSX (JavaScript XML): Sintaxe semelhante ao HTML usada dentro do JavaScript para criar interfaces.
+
+Babel: Ferramenta que converte JSX em JavaScript puro compatível com todos os navegadores.
+
+Componentes e Componentização
+Componentes são blocos reutilizáveis de código que representam partes da interface (UI).
+
+Podem ser criados como funções (function components) ou classes (class components).
+
+Facilitam a manutenção, organização e reutilização do código.
+
+Virtual DOM e Performance
+O React utiliza um DOM Virtual (Virtual DOM) para otimizar as atualizações na tela.
+
+Apenas os elementos que mudam são atualizados no DOM real, o que melhora muito a performance.
+
+Ecossistema do React
+React Router: Navegação entre páginas sem recarregar a aplicação (SPA).
+
+Redux: Biblioteca para gerenciar o estado global da aplicação (opcional).
+
+Vasta comunidade e integração com ferramentas como Tailwind, Axios, Firebase, etc.
+---------
+Compiladores e Bundlers
+Usei para transformar e empacotar o código moderno em um formato que os navegadores entendem.
+
+Nullish Coalescing Operator (??)
+Usei para definir um valor padrão apenas quando o valor anterior for null ou undefined.
+
+Objetos
+Usei para organizar dados em pares de chave e valor.
+
+Desestruturação
+Usei para extrair partes de objetos ou arrays de forma mais simples.
+
+Rest Operator (...)
+Usei para pegar o restante das propriedades ou itens ao separar valores.
+
+Short Syntax
+Usei para criar objetos de forma mais curta e limpa.
+
+Optional Chaining (?.)
+Usei para acessar propriedades profundas de forma segura, evitando erros.
+
+map()
+Usei para transformar todos os itens de um array em outro array.
+
+filter()
+Usei para filtrar itens de um array que atendem a uma condição.
+
+every()
+Usei para verificar se todos os itens de um array atendem a uma condição.
+
+some()
+Usei para verificar se pelo menos um item do array atende a uma condição.
+
+find() e findIndex()
+Usei para encontrar o primeiro item ou índice de um item que atende a uma condição.
+
+reduce()
+Usei para transformar um array em um único valor final, acumulando resultados.
+
+Template Literals
+Usei para criar strings com variáveis de forma mais organizada.
+
+Promises
+Usei para lidar com ações assíncronas que podem demorar para retornar resultado.
+-------------
+Componentes
+Blocos reutilizáveis da interface, escritos em funções ou classes, que retornam elementos JSX.
+
+JSX
+Sintaxe que permite escrever HTML dentro do JavaScript de forma mais intuitiva.
+
+Props
+Parâmetros usados para enviar informações de um componente pai para um componente filho.
+
+Estado (State)
+Estrutura que armazena e controla dados internos do componente, podendo ser alterado dinamicamente com useState.
+
+Rotas
+Sistema de navegação entre páginas em uma aplicação React, geralmente feito com a biblioteca React Router.
+-----------------------
+
+useState([])
+Usei esse código para que o React guarde as tarefas na memória da aplicação.
+
+useEffect(() => {...}, [])
+Usei esse código para que ele carregue as tarefas salvas no localStorage assim que a página abrir.
+
+useEffect(() => {...}, [lista])
+Usei esse código para atualizar o localStorage sempre que a lista mudar.
+
+setLista([...lista, texto])
+Usei esse código para adicionar uma nova tarefa à lista sem apagar as anteriores.
+
+filter((_, index) => index !== i)
+Usei esse código para excluir uma tarefa específica da lista.
+
+[nova[i], nova[i - 1]] = [nova[i - 1], nova[i]]
+Usei esse código para mover a tarefa uma posição acima (priorizar).
+
+[nova[i], nova[i + 1]] = [nova[i + 1], nova[i]]
+Usei esse código para mover a tarefa uma posição abaixo (postergar).
+
+setEditando(i) + setEditado(lista[i])
+Usei esse código para começar a editar uma tarefa quando clico em “Editar”.
+
+lista[i] = editado
+Usei esse código para salvar a tarefa depois de editá-la.
+
+<ol> {lista.map(...)} </ol>
+Usei esse código para mostrar cada tarefa na tela com seus botões.
+
+localStorage.setItem("tarefas", JSON.stringify(lista))
+Usei esse código para salvar as tarefas mesmo depois de atualizar a página.
