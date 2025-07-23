@@ -92,10 +92,12 @@ function ListaTarefas() {
             ) : (
               <>
                 <span className="texto">{item}</span>
-                <button className="botao-excluir" onClick={() => excluir(i)}>Excluir</button>
-                <button className="botao-mover" onClick={() => subir(i)}>Priorizar</button>
-                <button className="botao-mover" onClick={() => descer(i)}>Postergar</button>
-                <button className="botao-mover" onClick={() => editar(i)}>Editar</button>
+                <div className="grupo-botoes">
+                  <button className="botao-excluir" onClick={() => excluir(i)}>Excluir</button>
+                  <button className="botao-mover" onClick={() => subir(i)}>Priorizar</button>
+                  <button className="botao-mover" onClick={() => descer(i)}>Postergar</button>
+                  <button className="botao-mover" onClick={() => editar(i)}>Editar</button>
+                </div>
               </>
             )}
           </li>
